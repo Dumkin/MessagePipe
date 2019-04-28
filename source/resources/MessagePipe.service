@@ -1,0 +1,13 @@
+[Unit]
+Description=Message Pipe
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/MessagePipe
+ExecStart=/root/MessagePipe/app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
